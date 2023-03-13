@@ -9,6 +9,7 @@ services:
     volumes:
       - ../mariadb:/var/lib/mariadb
     environment:
+      MARIADB_DATABASE: kurly
       MARIADB_ROOT_PASSWORD: example
       TZ: "Asia/Seoul"
     command:
