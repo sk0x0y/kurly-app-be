@@ -10,7 +10,7 @@ services:
       - ../mariadb:/var/lib/mariadb
     environment:
       MARIADB_DATABASE: kurly
-      MARIADB_ROOT_PASSWORD: example
+      MARIADB_ROOT_PASSWORD: ${DB_PASSWORD}
       TZ: "Asia/Seoul"
     command:
       # 위 명령어를 사용하지 않으면, 일부 설정이 latin으로 설정됩니다.
