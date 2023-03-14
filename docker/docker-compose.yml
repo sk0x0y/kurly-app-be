@@ -26,3 +26,5 @@ services:
   nest:
     image: ghcr.io/${GITHUB_REPOSITORY_OWNER}/kurlyapp/be:${GITHUB_KURLY_BE_SHA}
     container_name: kurlyapp-be-nest
+    environment:
+      - DB_PASSWORD=${DB_PASSWORD}
