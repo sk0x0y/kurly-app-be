@@ -3,7 +3,7 @@ version: '3'
 services:
   mariadb:
     image: mariadb:10
-    container_name: mariadb
+    container_name: kurlyapp-be-mariadb
     ports:
       - "3306:3306"
     volumes:
@@ -25,4 +25,4 @@ services:
 
   nest:
     image: ghcr.io/${GITHUB_REPOSITORY_OWNER}/kurlyapp/be:${GITHUB_KURLY_BE_SHA}
-    container_name: nest
+    container_name: kurlyapp-be-nest
