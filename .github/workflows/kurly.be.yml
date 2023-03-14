@@ -58,6 +58,7 @@ jobs:
           script: |
             echo "Connected with Actions!"
             cd ./app/kurly-be/docker
+            chmod +x set_env.sh
             ./set_env.sh
             echo "GITHUB_REPOSITORY_OWNER=${{ github.repository_owner }}" > .env
             echo "GITHUB_KURLY_BE_SHA=${{ github.sha }}" >> .env
