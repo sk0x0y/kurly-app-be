@@ -61,6 +61,7 @@ jobs:
             ./set_env.sh
             echo "GITHUB_REPOSITORY_OWNER=${{ github.repository_owner }}" > .env
             echo "GITHUB_KURLY_BE_SHA=${{ github.sha }}" >> .env
+            echo "DB_PASSWORD=${{ secrets.DB_PASSWORD }}" >> .env
             sudo docker compose down
             sudo docker rmi ghcr.io/sk0x0y/kurlyapp/be:$GITHUB_KURLY_BE_SHA
             sudo docker compose --env-file .env up -d

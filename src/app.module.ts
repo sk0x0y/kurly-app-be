@@ -11,7 +11,7 @@ import { AppService } from './app.service';
         const env = process.env.NODE_ENV;
 
         if (env === 'production') {
-          return 'localhost';
+          return 'mariadb';
         }
 
         return '49.247.41.209';

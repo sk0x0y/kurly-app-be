@@ -3,7 +3,7 @@
 
 FROM node:lts-alpine
 
-ARG DB_PASSWORD="example"
+ARG DB_PASSWORD
 
 WORKDIR /app
 
