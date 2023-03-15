@@ -5,13 +5,13 @@ services:
     image: mariadb:10
     container_name: kurlyapp-be-mariadb
     ports:
-      - "3306:3306"
+      - '3306:3306'
     volumes:
       - ../mariadb:/var/lib/mariadb
     environment:
       MARIADB_DATABASE: kurly
       MARIADB_ROOT_PASSWORD: ${DB_PASSWORD}
-      TZ: "Asia/Seoul"
+      TZ: 'Asia/Seoul'
     command:
       # 위 명령어를 사용하지 않으면, 일부 설정이 latin으로 설정됩니다.
       - --character-set-server=utf8mb4
@@ -21,10 +21,11 @@ services:
     image: adminer:4
     container_name: adminer
     ports:
-      - "8080:8080"
+      - '8080:8080'
 
   nest:
     image: ghcr.io/${GITHUB_REPOSITORY_OWNER}/kurlyapp/be:${GITHUB_KURLY_BE_SHA}
     container_name: kurlyapp-be-nest
     environment:
       - DB_PASSWORD=${DB_PASSWORD}
+      - DATABASE_URL=${DATABASE_URL}
