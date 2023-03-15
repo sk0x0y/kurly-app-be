@@ -14,7 +14,7 @@
       "npm run format",
       "npm run lint"
     ],
-    "**/*.{prisma}": [
+    "prisma/schema.prisma": [
       "npx prisma format"
     ]
   },
