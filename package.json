@@ -13,6 +13,9 @@
     "**/*.{tsx,ts,jsx,js}": [
       "npm run format",
       "npm run lint"
+    ],
+    "**/*.{prisma}": [
+      "npx prisma format"
     ]
   },
   "scripts": {
